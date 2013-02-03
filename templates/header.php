@@ -25,7 +25,7 @@
         <div class="container-fluid">
 
             <div id="top">
-                <a href="/"><img alt="CollegeMatch" src="img/collegematchlogo.gif"/></a>
+                <a href="/"><img alt="tickets! get your tickets here!" src="img/header.png"/></a>
             </div>
             
            
