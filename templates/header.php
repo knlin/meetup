@@ -10,9 +10,9 @@
         <link rel="shortcut icon" href="img/graduation-hat.ico"/>
 
         <?php if (isset($title)): ?>
-            <title>CollegeMatch | <?= htmlspecialchars($title) ?></title>
+            <title>tickets for two | <?= htmlspecialchars($title) ?></title>
         <?php else: ?>
-            <title>CollegeMatch</title>
+            <title>tickets for two</title>
         <?php endif ?>
 
         <script src="js/jquery-1.8.2.js"></script>

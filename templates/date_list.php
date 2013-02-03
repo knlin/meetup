@@ -16,7 +16,7 @@
     else
     {
         echo '<tr><td>' . $date_id["name"] . '</td>';
-        echo '<td><a href="http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Dmovies-tv&field-keywords=' . $movie . '">' . $movie . '</a></td></tr>';
+        echo '<td><a href="http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Dmovies-tv&field-keywords=' . htmlspecialchars($movie) . '">' . $movie . '</a></td></tr>';
     } 
     ?>
     </tbody>
