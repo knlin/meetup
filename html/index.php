@@ -2,7 +2,7 @@
     // configuration
     require("../includes/config.php");
     
-   $rows = query("SELECT * FROM dates WHERE id_male = ? OR id_female = ?", $_SESSION["id"], $_SESSION["id"]);
+    $rows = query("SELECT * FROM dates WHERE id_male = ? OR id_female = ?", $_SESSION["id"], $_SESSION["id"]);
 
     if(empty($rows))
     {
@@ -10,19 +10,22 @@
     }
     
     $date_id;
-    //dump($rows);
+    $temp_id = NULL;
     if ($rows[0]["id_male"] == $_SESSION["id"])
     {
-        $temp_id = query("SELECT name FROM users WHERE id = ?", $rows[0]["id_female"]);
-        $date_id = $temp_id[0];
+        $temp_id = query("SELECT name, email FROM users WHERE id = ?", $rows[0]["id_female"]);
+        //dump($temp_id);
+        $date_id = $temp_id[0]["name"];
     }
     else
     {
-        $temp_id = query("SELECT name FROM users WHERE id = ?", $rows[0]["id_male"]);
-        $date_id = $temp_id[0];
+        $temp_id = query("SELECT name, email FROM users WHERE id = ?", $rows[0]["id_male"]);
+        $date_id = $temp_id[0]["name"];
     }
     
     $movie = $rows[0]["movie"];
-    render("date_list.php", ["title" => "Your date", "date_id" => $date_id, "movie" => $movie]);
+    $email = $temp_id[0]["email"];
+
+    render("date_list.php", ["title" => "Your date", "date_id" => $date_id, "movie" => $movie, "email" => $email]);
  
 ?>
