@@ -26,3 +26,6 @@
     ?>
     </tbody>
 </table>
+<div style="padding-left:300px">
+<img src="../img/link.png" width="150" height="45"></img>
+</div>

@@ -37,3 +37,21 @@
     /* center contents */
     text-align: center;
 }
+
+/*#login
+{
+    padding-top:100px;
+    float:left;
+    width: 400px;
+}
+
+#description
+{
+    float:left;
+    padding-top:45px;
+}*/
+
+#error
+{
+    color:red;
+}

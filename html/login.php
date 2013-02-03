@@ -46,7 +46,7 @@
                 $_SESSION["selection_index"] = $row["selection_index"];*/
 
                 // redirect to portfolio
-                redirect("/");
+                redirect("/date.php");
             }
         }
 

@@ -31,7 +31,7 @@
                     <li><a href="logout.php">Log out</a></li>
                 </ul>
             </div>
-            <div id="middle">
+            <div id="middle" style="width:100%;">
                 <a href="/"><img alt="tickets! get your tickets here!" src="img/header.png"/></a>
                 
 

@@ -18,13 +18,13 @@
             return false;
         }
 
-        /*var emailpatt = /@[*.]+.edu/i;
+        var emailpatt = /@[.]+.edu/i;
 
         if (emailpatt.test($('email').val()) == '')
         {
             document.getElementById("error").innerHTML = "Your email must end in .edu";
             return false;
-        }*/
+        }
 
         if ($('#password').val() == '' || $('#confirmation').val() == '')
         {
@@ -88,5 +88,4 @@
 
 <div>
     <p id="error">&nbsp;</p>
-    <a href="login.php">log in</a>
 </div>
