@@ -5,9 +5,9 @@
     
     // onsubmit
     $('#login').submit(function() {
-    if ($('#username').val() == '')
+    if ($('#email').val() == '')
     {
-        document.getElementById("error").innerHTML = "Enter a username";
+        document.getElementById("error").innerHTML = "Enter an email";
         return false;
     }
     if ($('#password').val() == '')
@@ -25,7 +25,7 @@
 <form action="login.php" method="post" id="login">
     <fieldset>
         <div class="control-group">
-            <input autofocus name="username" id="username" placeholder="Username" type="text"/>
+            <input autofocus name="email" id="email" placeholder="Email" type="text"/>
         </div>
         <div class="control-group">
             <input name="password" id="password" placeholder="Password" type="password"/>

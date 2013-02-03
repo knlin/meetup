@@ -17,28 +17,11 @@
                      
         // insert new user into database
         
-        // if the user did not enter an act score assume 0
-        if (empty($_POST["act"]))
-        {
-            $_POST["act"] = 0;
-        }
-        
-        // same for sat
-        if (empty($_POST["sat"]))
-        {
-            $_POST["sat"] = 0;        
-        }
-        
-        // scale GPA to 4.0 scale
-        $gpa = $_POST["gpa"]*4.0/$_POST["gpa2"];
-        
-        // calculate selection index
-        $index = calculate_index($_POST["sat"], $_POST["act"], $gpa);
         
         // make a new row for the user
-        if (query("INSERT INTO users (username, hash, gpa, act, sat, selection_index) VALUES(?, ?, ?, ?, ?, ?)", $_POST["username"], crypt($_POST["password"]), $gpa, $_POST["act"], $_POST["sat"], $index) === false)
+        if (query("INSERT INTO users (name, email, password, gender, looking, class) VALUES(?, ?, ?, ?, ?, ?)", $_POST["name"], $_POST["email"], crypt($_POST["password"]), $_POST["gender"], $_POST["looking"], $_POST["class"]) === false)
         {   
-            apologize("Username was used.");
+            apologize("Email was used.");
             exit(1);
         }
         else 
@@ -51,12 +34,7 @@
         
             // log in new user
             $_SESSION["id"] = $id;
-            
-            // stores stuff necessary for greeting message in session
-            $info = query("SELECT username, selection_index FROM users WHERE id = ?", $id);
-            $_SESSION["username"] = $info[0]["username"];
-            $_SESSION["selection_index"] = $info[0]["selection_index"];
-        
+                   
             // redirect to portfolio
             redirect("/");
         }  
