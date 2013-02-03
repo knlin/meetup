@@ -73,26 +73,39 @@
 <form action="register.php" method="post" id="registration">
     <fieldset>
         <div class="control-group">
-            <input autofocus name="username" id="username" placeholder="Username" type="text"/>
-        </div>
+            <input name="firstname" id="firstname" placeholder="Your first name, please" type="text"/>
+        </div> 
+        <div class="control-group">
+            <input name="email" id="email" placeholder="Email" type="text"/>
+       </div>
         <div class="control-group">
             <input name="password" id="password" placeholder="Password" type="password"/>
-        </div>
+        </div>  
         <div class="control-group">
             <input name="confirmation" id="confirmation" placeholder="Confirmation" type="password"/>
+        </div> 
+        <div class="control-group">
+            <p>Class year</p>
+            <select>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+            </select>
         </div>
         <div class="control-group">
-            <input name="sat" id="sat" placeholder="SAT Score" type="text"/>
+            <p>I am a</p>
+            <select>
+                <option value="F">Female</option>
+                <option value="M">Male</option>
+            </select>
+            <p>Searching for a</p>
+            <select>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
         </div>
-        <div class="control-group">
-            <input name="act" id="act" placeholder="ACT Score" type="text"/>
-        </div>
-        <div class="control-group">
-            <input name="gpa" id="gpa" placeholder="GPA" type="text"/>
-        </div>
-        <div class="control-group">
-            <input name="gpa2" id="gpa2" placeholder="Maximum GPA at your school" type="text"/>
-        </div>
+        
         <div class="control-group">
             <button type="submit" class="btn">Register</button>
         </div>    
