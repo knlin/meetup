@@ -8,7 +8,7 @@
             </div>
 
             <div id="bottom">
-                Copyright &#169; AnD Shi JSON Wang Albear Li
+          
             </div>
 
         </div>

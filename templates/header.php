@@ -22,12 +22,6 @@
     </head>
 
     <body>
-         <?php 
-            if(!(empty($_SESSION["username"])))
-            {
-                echo '<div id="greeting";><p>O hai, <strong>' . htmlspecialchars($_SESSION["username"]) . "</strong>! Your selection index is <strong>" . htmlspecialchars($_SESSION["selection_index"]) . '</strong>.</p></div>';
-            } 
-            ?>
         <div class="container-fluid">
 
             <div id="top">
@@ -39,17 +33,8 @@
             <div id="middle">
                 <ul class="nav nav-pills">
                     <li><a href="/">Home</a></li>
-                    <li><a href="search.php">College Search</a></li>
-                    <li><a href="explore.php">Explore</a></li>
-                    <?php 
-                        if(!(empty($_SESSION["id"])))
-                        {
-                            echo '<li><a href="suggest_colleges.php">Suggest Colleges</a></li>';
-                            echo '<li><a href="change_info.php">My Stats</a></li>';
-                            echo '<li><a href="change_password.php">Change Password</a></li>';
-                            echo '<li><a href="logout.php">Log Out</a></li>';
-                        }
-                    ?>
+                    <li><a href="date.php">Go on a date!</a></li>
+                    <li><a href="logout.php">Log out</a></li>
                 </ul>
                 
 
